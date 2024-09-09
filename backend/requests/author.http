@@ -1,0 +1,60 @@
+@baseurl=http://localhost:5000/authors
+
+### Restituisce tutti gli autori
+GET {{baseurl}}
+
+### Restituisce uno specifico autore
+GET {{baseurl}}/66db3bfcb50afd3d04aad5b9
+
+### Crea un autore con endpoint authors
+POST {{baseurl}}
+Content-Type: application/json
+
+{
+    "name": "Agamennone",
+    "surname": "Filone",
+    "email": "fra@123.com",
+    "birthDate": "1992-05-15",
+    "avatar": ""
+}
+
+
+### Modifica un autore
+PUT {{baseurl}}/66db478757b43c624b43ce38
+Content-Type: application/json
+
+{
+    "surname": "Trise"
+}
+
+### Elimina un autore
+DELETE  {{baseurl}}/66db478757b43c624b43ce38
+
+###Crea utente tramite form di registrazione
+
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "name": "Agamennone",
+    "surname": "Filone",
+    "email": "xx@gmail.com",
+    "password": "asdf123",
+    "birthDate": "1992-05-15",
+    "avatar": ""
+}
+
+### Effettuare la login
+
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "xx@gmail.com",
+    "password": "asdf123"
+}
+
+### Restituisce il profilo
+
+GET http://localhost:5000/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JJZCI6IjY2ZGRkM2VmMWZmNmY3ZTM1NWRlODdiOSIsImVtYWlsIjoieHhAZ21haWwuY29tIiwiaWF0IjoxNzI1ODE4Mjk3LCJleHAiOjE3MjU4NjE0OTd9.bTMwRYrwQ5S3GWrJSffXNOBlY-4mlGMnUcFEzumwVGM

@@ -1,0 +1,26 @@
+@baseurl=http://localhost:5000/posts
+
+POST {{baseurl}}/66dc751af81a8de261cefb09/comments
+Content-Type: application/json
+
+{
+    "author": "66db3bfcb50afd3d04aad5b9",
+    "content": "Questo è il terzo commento"
+}
+
+###
+GET {{baseurl}}/66dc751af81a8de261cefb09/comments
+
+###
+GET {{baseurl}}/66dc751af81a8de261cefb09/comments/66dd8df9da772a5bf83b1783
+
+###
+PUT {{baseurl}}/66dc751af81a8de261cefb09/comment/66dd8df9da772a5bf83b1783
+Content-Type: application/json
+
+{
+    "content": "Questo è il commento modificato"
+}
+
+###
+DELETE {{baseurl}}/66dc751af81a8de261cefb09/comment/66dd8df9da772a5bf83b1783

@@ -1,0 +1,33 @@
+@baseurl=http://localhost:5000/posts
+
+GET {{baseurl}}
+
+###
+
+GET {{baseurl}}/66dc6ce45383b9a8205b5a23
+
+###
+
+POST {{baseurl}}
+Content-Type: application/json
+
+{
+    "category": "Da eliminare",
+    "title": "Nuovo Post",
+    "author": "66db3bfcb50afd3d04aad5b9",
+    "content": "Contenuto del post"
+}
+
+###
+
+PUT {{baseurl}}/66dc6ce45383b9a8205b5a23
+Content-Type: application/application/json
+
+{
+  "title": "titolo modificato"
+}
+
+###
+
+DELETE  {{baseurl}}/66dc6ce45383b9a8205b5a23
+
